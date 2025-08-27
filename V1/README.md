@@ -1,0 +1,1 @@
+# Primeira Versão da Extensão de atalhos para o site GETS, para google Chrome.

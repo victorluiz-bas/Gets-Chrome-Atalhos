@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+<head>
+    <title>VB + GETS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 10px;
+            background-image: url("fundo.png");
+            background-size: Contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 300px;
+        }
+        
+        .grid {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .box {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        label {
+            font-weight: bold;
+            font-size: 13px;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input {
+            width: 100%;
+            padding: 6px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            margin-top: 6px;
+            width: 100%;
+            padding: 6px;
+            background-color: #2a7de1;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color: #1c5fb8;
+        }
+        
+        #status {
+            text-align: center;
+            font-size: 12px;
+            color: #333;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid">
+        <!-- Coluna Esquerda -->
+        <div class="column">
+            <div class="box">
+                <label for="textoEquip">EMH &#8594 ID</label>
+                <input type="text" id="textoEquip" placeholder="Buscar..." />
+                <button id="pesquisarEquip" style="background-color: #28a745;">Pesq. ID EMH</button>
+            </div>
+
+            <div class="box">
+                <label for="textoEquipNS">EMH &#8594 N/S</label>
+                <input type="text" id="textoEquipNS" placeholder="Buscar..." />
+                <button id="pesquisarEquipNS" style="background-color: #28a745;">Pesq. N/S EMH</button>
+            </div>
+
+
+            <div class="box">
+                <label for="textoMP">MP &#8594 Cadastro</label>
+                <input type="text" id="textoMP" placeholder="Buscar..." />
+                <button id="pesquisarMP" style="background-color: #a74828;">Pesq. Cad MP</button>
+            </div>
+
+
+            <!-- Mexendo aqui -->
+            <div class="box">
+                <label for="textoMP2">MP &#8594 Consulta</label>
+                <input type="text" id="textoMP2" placeholder="Buscar..." />
+                <button id="pesquisarMP2" style="background-color: #a74828;">Pesq. Agenda MP</button>
+            </div>
+        </div>
+
+        <!-- Coluna Direita -->
+        <div class="column">
+            <div class="box">
+                <label for="textoID">OS &#8594 ID</label>
+                <input type="text" id="textoID" placeholder="Buscar..." />
+                <button id="pesquisarID">Pesquisar ID</button>
+            </div>
+
+            <div class="box">
+                <label for="textoNS">OS &#8594 N/S</label>
+                <input type="text" id="textoNS" placeholder="Buscar..." />
+                <button id="pesquisarNS">Pesquisar NS</button>
+            </div>
+
+            <div class="box">
+                <label for="textoOS">OS &#8594 OS</label>
+                <input type="text" id="textoOS" placeholder="Buscar..." />
+                <button id="pesquisarOS">Pesquisar OS</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="status"></div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
